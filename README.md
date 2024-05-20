@@ -6,4 +6,4 @@ This folder contains my coding practice files among items below.
 - Leetcode
     - DataStructuresAlgorithmsCrashCourse
     - AceCodingInterview75Questions
-
+- autoScripts
