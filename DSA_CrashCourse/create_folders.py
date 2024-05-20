@@ -13,9 +13,13 @@ def create_folders(chapter, topics):
             f.write(f"# {chapter}\nThis is the README for {chapter}")
 
     # Create the topic subfolders
-    for topic in topics:
-        topic_path = os.path.join(chapter_path, topic)
+    for i, topic in enumerate(topics, start=1):
+        topic_path = os.path.join(chapter_path, f"{i}_{topic}")
+        cpp_path = os.path.join(topic_path, "cpp")
+        python_path = os.path.join(topic_path, "python")
         os.makedirs(topic_path, exist_ok=True)
+        os.makedirs(cpp_path, exist_ok=True)
+        os.makedirs(python_path, exist_ok=True)
 
         # Create README.md in the new folder
         with open(os.path.join(topic_path, "README.md"), 'w') as f:
